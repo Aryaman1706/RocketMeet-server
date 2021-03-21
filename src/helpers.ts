@@ -1,4 +1,5 @@
 import crypto from 'crypto';
+import { ValidationResult } from 'joi';
 import { publicEncryptionKey, publicEncryptionIV } from './config';
 import { Choice } from './db/models/poll';
 
@@ -32,3 +33,7 @@ export const decrypt = (text: string): string => {
   decrypted = Buffer.concat([decrypted, decipher.final()]);
   return decrypted.toString();
 };
+
+export interface CustomValidationResult<T> extends ValidationResult {
+  value: T
+}

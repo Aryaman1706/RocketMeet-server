@@ -37,6 +37,7 @@
     "firebase-admin": "^9.4.2",
     "firebase-token-generator": "^2.0.0",
     "helmet": "^4.4.1",
+    "joi": "^17.4.0",
     "mongoose": "^5.11.15",
     "pino": "^6.11.0"
   },
